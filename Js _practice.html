@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Javascript Practise</title>
+</head>
+
+<body style="background-color:azure">
+
+    <input id="test" type="text">
+    <button type="button" onclick="helloFunction()">Checking</button>
+    <p id="power"></p>
+    <script>
+        function helloFunction() {
+            var message, z;
+            message = document.getElementById("power");
+            innerHTML = "";
+            z = document.getElementById("test"), value;
+            try {
+                if (z == "") throw "empty";
+                if (isNaN(z)) throw "not a  number";
+                a = Number(a);
+                if (z < 10) throw "Value is to High";
+                if (z > 20) throw "Value is to Mini";
+            } catch (err) {
+                message.innerHTML = "Input is " + err;
+            }
+        }
+
+        /*      function testFunction(){
+                var message, a;
+                message = document.getElementById("power");
+                innerHTML = "";
+                a = document.getElementById("test").value;
+                try{
+                    if(a == "") throw "empty";
+                    if(isNaN(a)) throw "not a number";
+                    a = Number(a);
+                    if(a < 10) throw "Value is too High";
+                    if(a > 20) throw "Value is too Mini";
+                }
+                catch(err){
+                message.innerHTML = "Input is " + err;
+            }
+        } */
+
+
+        function Welcome(name) {
+            console.log('' + name + 'Welcome to our event');
+        }
+        Welcome('Nabeel');
+
+        function monitorCount(rows, columns) {
+            return rows * columns;
+        }
+
+        const numOfMonitors = monitorCount(5, 2);
+
+        console.log(numOfMonitors);
+
+
+        function hospitalItems(beds, icu, ccu) {
+            return beds + icu + ccu;
+
+        }
+        var numOfbeds = hospitalItems(8, 8, 8);
+
+        console.log(numOfbeds);
+
+        function school(chairs, softboards, tables, classrooms) {
+
+            return chairs / classrooms * softboards - tables;
+        }
+        let numOfItems = school(5, 10, 5, 5);
+
+        console.log(numOfItems);
+
+
+        function monitorCount(rows, columns) {
+            return rows * columns;
+        }
+
+        function costOfMonitors(rows, columns) {
+            return monitorCount(rows, columns) * 200;
+
+        }
+        const totalCost = costOfMonitors(5, 4);
+
+        console.log(totalCost);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript by Mosh</title>
+</head>
+
+<body>
+    <div id="test">Test</div>
+
+    <script>
+        let person = {
+            name: 'Nabeel',
+            age: 25
+
+        };
+        //Dot Notattion
+        person.name = 'Nabeel';
+
+        //Bracket Notation'
+        let selection = 'name';
+        person[selection] = 'Nabeel';
+        console.log(person);
+
+        let selectedColors = ['red', 'blue', 'orange'];
+        selectedColors[2] = 1;
+        console.log(selectedColors.length);
+
+
+        function great(name, lastname) {
+            console.log('Hello' + name + '' + lastname);
+        }
+        great('Nabeel', 'Ahmed');
+
+        // OOPS STARTS FROM HERE
+        //Calculating a function 
+        function square(number) {
+            return number * number + 1;
+        }
+        let number = square(13);
+        console.log(number);
+
+        let baseSalary = 30;
+        let overTime = 10;
+        let rate = 5;
+
+        function getWage(baseSalary, overTime, rate) {
+            return baseSalary + (overTime + rate);
+        }
+
+        let employe = {
+            baseSalary: 30,
+            overTime: 10,
+            rate: 5,
+
+            getWage: function() {
+                return this.baseSalary + (this.overTime + this.rate);
+            }
+        };
+        employe.getWage();
+        document.getElementById("test").innerHTML;
+
+
+        // Factorie Function 
+        function createCircle(radius) {
+            return {
+                radius,
+                draw: function() {
+                    console.log('draw');
+                }
+            };
+        }
+        const circle = createCircle(1)
+            //circle.draw();
+
+        // Constructor Function
+        function Circle(radius) {
+            console.log(this, this)
+            this.radius = radius;
+            this.draw = function() {
+                console.log("draw");
+            }
+        }
+        const another = Circle(0);
+
+
+        let x = {
+            value: 10
+        }
+        let y = x
+        x.value = 20;
+
+        let textnumber = 10;
+
+        function increase(textnumber) {
+            textnumber++;
+        }
+        increase(textnumber);
+        console.log(number);
+
+        let obj = {
+            value: 10
+        };
+
+        function increase(textnumber) {
+            obj.value++;
+        }
+        increase(obj);
+        console.log(obj);
+
+
+        //Same Result of both line both pattren are follow
+        Circle.location = {
+            a = 10
+        };
+
+        const PropertyName = 'location';
+        Circle[PropertyName] = 'center-location';
+        Circle['location'] = {
+            a = 10
+        };
+
+        delete 'location';
+
+        //FUNCTION PRACTICE BY CODEACADEMY
+
+        function Welcome(name) {
+            console.log('' + name + 'Welcome to our event');
+        }
+        Welcome('Nabeel');
+
+        //FUNCTION RETURN
+        function monitorCount(rows, columns) {
+            return rows * columns;
+        }
+
+        const numOfMonitors = monitorCount(5, 2);
+
+        console.log(numOfMonitors);
+
+
+        function hospitalItems(beds, icu, ccu) {
+            return beds + icu + ccu;
+
+        }
+        var numOfbeds = hospitalItems(8, 8, 8);
+
+        console.log(numOfbeds);
+
+        function school(chairs, softboards, tables, classrooms) {
+
+            return chairs / classrooms * softboards - tables;
+        }
+        let numOfItems = school(5, 10, 5, 5);
+
+        console.log(numOfItems);
+
+        //FUNCTION HELPER
+        function monitorCount(rows, columns) {
+            return rows * columns;
+        }
+
+        function costOfMonitors(rows, columns) {
+            return monitorCount(rows, columns) * 200;
+
+        }
+        const totalCost = costOfMonitors(5, 4);
+
+        console.log(totalCost);
+
+        //Function Expressions
+
+
+        const plantNeedsWater = function(day) {
+            if (day === 'Wednesday') {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        plantNeedsWater('Tuesday');
+
+        console.log(plantNeedsWater('Tuesday'));
+    </script>
+</body>
+
+</html>

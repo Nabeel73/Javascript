@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title> TIMe </title>
+</head>
+<body>
+<script>
+
+/*function format_time(date_obj) {
+  // formats a javascript Date object into a 12h AM/PM time string
+  var hour = date_obj.getHours();
+  var minute = date_obj.getMinutes();
+  var amPM = (hour > 11) ? "pm" : "am";
+  if(hour > 12) {
+    hour -= 12;
+  } else if(hour == 0) {
+    hour = "12";
+  }
+  if(minute < 10) {
+    minute = "0" + minute;
+  }
+  return hour + ":" + minute + amPM;
+}
+*/
+
+
+function formatAMPM(date) {
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  return strTime;
+}
+
+
+</script>
+
+
+</body>
+
+</html>
