@@ -185,6 +185,17 @@
         plantNeedsWater('Tuesday');
 
         console.log(plantNeedsWater('Tuesday'));
+        //Arrow Function
+        const plantNeedsWater = (day) => {
+            if (day === 'Wednesday') {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        //Concise Body Arrow Functions 
+        const plantNeedsWater = day => day === 'Wednesday' ? true : false;
     </script>
 </body>
 
