@@ -229,7 +229,7 @@
 
 
 
-        Block Scope
+        //Block Scope
         /*Default 
         const logVisibleLightWaves = ()=>{
           const lightWaves = 'Moonlight';
@@ -305,7 +305,7 @@
 
         logVisibleLightWaves();
 
-        Review: Scope
+        /*Review: Scope
         In this lesson, you learned about scope and how it impacts the accessibility of different variables.
 
         Let 's review the following terms:
@@ -324,7 +324,10 @@
         Scope pollution is when too many variables exist in a namespace or variable names are reused.
 
         As you
-        continue your coding journey, remember to use best practices when declaring your variables!Scoping your variables tightly will ensure that your code has clean, organized, and modular logic.
+        continue your coding journey, 
+        remember to use best practices when declaring your
+        variables!Scoping your variables tightly will ensure that
+         your code has clean, organized, and modular logic.*/
 
         //Arrays Start
 
@@ -341,8 +344,8 @@
         const hobbies = ['match', 'strat', 'Now'];
         console.log(hobbies)
 
-        Accessing Elements
-        Default
+        //    Accessing Elements
+        //  Default
         const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];
 
         const listItem = famousSayings[0];
@@ -373,25 +376,25 @@
 
         console.log(utensils);
 
-        The.length property
+        //  The.length property
         const objectives = ['Learn a new languages', 'Read 52', 'books Run a', ' marathon'];
         console.log(objectives.length);
 
-        The.push() Method
+        // The.push() Method
 
         const chores = ['wash dishes', 'do laundry', 'take out trash'];
 
         chores.push('wash', ' dishes');
         console.log(chores);
 
-        The.pop() Method
+        // The.pop() Method
 
         const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
         chores.pop();
         console.log(chores);
 
 
-        Arrays and Functions
+        //Arrays and Functions
 
         const concept = ['arrays', 'can', 'be', 'mutated'];
 
@@ -409,7 +412,7 @@
         removeElement(concept);
         console.log(concept);
 
-        Nested Arrays
+        //Nested Arrays
 
         const numberClusters = [
             [1, 2],
@@ -420,7 +423,7 @@
         const target = numberClusters[2][1];
 
 
-        Repeating Tasks Manually
+        //Repeating Tasks Manually
 
         // Write your code below
         const vacationSpots = ['Mozambique', 'Thailand', 'Bolivia'];
@@ -439,7 +442,7 @@
         for (let dress = 10; dress < 20; dress++) {
             console.log(dress);
 
-            Repeating Tasks Manually
+            // Repeating Tasks Manually
 
 
             // Write your code below
@@ -458,7 +461,7 @@
             //Do...While Statements
 
             // This  code dont print any thing below
-            const cupsOfSugarNeeded = ;
+            const cupsOfSugarNeeded = 0;
             const cupsAdded = 1;
             do {
                 cupsAdded++
@@ -500,6 +503,24 @@ while loops allow for different types of stopping conditions
 Stopping conditions are crucial for avoiding infinite loops.
 do...while loops run code at least once— only checking the stopping condition after the first execution
 The break keyword allows programs to leave a loop during the execution of its block.*/
+
+
+            //  Higher - Order Functions
+            //  Functions as Data
+
+            const checkThatTwoPlusTwoEqualsFourAMillionTimes = () => {
+                for (let i = 1; i <= 1000000; i++) {
+                    if ((2 + 2) != 4) {
+                        console.log('Something has gone very wrong :( ');
+                    }
+                }
+            };
+
+            // Write your code below
+            const is2p2 = checkThatTwoPlusTwoEqualsFourAMillionTimes;
+            is2p2();
+            console.log(is2p2.name);
+        }
     </script>
 
 </body>
