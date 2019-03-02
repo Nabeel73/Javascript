@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Javascript by Mosh</title>
+    <title>Javascript by Mosh and CodeAcademy</title>
 </head>
 
 <body>
@@ -521,6 +521,74 @@ The break keyword allows programs to leave a loop during the execution of its bl
             is2p2();
             console.log(is2p2.name);
         }
+        //Practice make on current situtation
+        let warBetweenIndiaPakistan = () => {
+            for (let a = 1; a == 2; a++) {
+                if ((4 + 5) != 9) {
+                    console.log('if war start no one is save in subcontinet:(');
+                }
+            }
+        };
+        let indiaPakistan = warBetweenIndiaPakistan;
+        indiaPakistan();
+        console.log(indiaPakistan.name);
+
+        //Higherlevel Functions as Parameters single code start here
+        const checkThatTwoPlusTwoEqualsFourAMillionTimes = () => {
+            for (let i = 1; i <= 1000000; i++) {
+                if ((2 + 2) != 4) {
+                    console.log('Something has gone very wrong :( ');
+                }
+            }
+        };
+        const addTwo = num => num + 2;
+        const timeFuncRuntime = funcParameter => {
+            let t1 = Date.now();
+            funcParameter();
+            let t2 = Date.now();
+            return t2 - t1;
+        };
+        // Write your code below
+        const time2p2 = timeFuncRuntime(checkThatTwoPlusTwoEqualsFourAMillionTimes);
+        const checkConsistentOutput = (func, val) => {
+            let firstTry = func(val);
+            let secondTry = func(val);
+            if (firstTry === secondTry) {
+                return firstTry
+            } else {
+                return 'This function returned inconsistent results'
+            }
+        };
+        checkConsistentOutput(addTwo, 10);
+        //Higherlevel Functions as Parameters single code End here
+
+        //  Iterators: Introduction to Iterators
+        //three array methods (1(.forEach),2(.map),3(.filters)) show with default example
+        const artists = ['Picasso', 'Kahlo', 'Matisse', 'Utamaro'];
+
+        artists.forEach(artist => {
+            console.log(artist + ' is one of my favorite artists.');
+        });
+
+        const numbers = [1, 2, 3, 4, 5];
+        const squareNumbers = numbers.map(number => {
+            return number * number;
+        });
+        console.log(squareNumbers);
+        const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];
+
+        const onlyNumbers = things.filter(thing => {
+            return typeof thing === 'number';
+        });
+        console.log(onlyNumbers);
+
+        //.forEach task one
+        const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+        // Iterate over fruits below
+        fruits.forEach(fruits => {
+            console.log('I want to eat a ' + fruits)
+        });
     </script>
 
 </body>
