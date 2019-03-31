@@ -622,6 +622,68 @@ The break keyword allows programs to leave a loop during the execution of its bl
         const longFavoriteWords = favoriteWords.filter(word => {
             return word.length > 7;
         });
+//Before the async "Promise" chapter is missing
+        //The "async" Keyword with default example
+        
+        function withConstructor(num){
+        return new Promise((resolve, reject) => {
+         if (num === 0){
+        resolve('zero');
+        } else {
+        resolve('not zero');
+        }
+        })
+        }
+
+        withConstructor(0)
+        .then((resolveValue) => {
+        console.log(` withConstructor(0) returned a promise which resolved to: ${resolveValue}.`);
+        })
+
+        // Write your code below:
+        async function withAsync(num){
+        if (num === 0){
+       return 'zero';
+     } else {
+       return 'not zero';
+     }
+    }
+    withAsync(100)
+    .then((resolveValue) => {
+    console.log(" withAsync(100) returned a promise which resolved to: ${resolveValue}.");
+    })
+
+    //Async keyword own practice example creater
+
+
+function withConstructor(num){
+  return new Promise((active, block) => {
+    if (num === 0){
+      active ('let play');
+    }else{
+      active('Not Playing');
+    }
+    })  
+    }
+    withConstructor(0)
+    .then((activeValue ) => {
+  console.log("withConstructor (0) returend a promise which is actived to:${activeValue}.");
+  })
+  async function withAsync(num){
+    if(num === 0){
+      return 'Hello';
+    }else{
+      return 'Stay at your Position';
+    }
+  }
+  withAsync(100)
+  .then((activeValue) => {
+    console.log("withAsync(100) returned a promise which is active to:${activeValue}.");
+  })
+  
+
+
+
     </script>
 
 </body>
